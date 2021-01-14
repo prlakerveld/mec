@@ -7,7 +7,7 @@ import time
 import sys
 import logging
 import daemon
-import resource
+#import resource #This does not work on windows systems, uncomment this if using a UNIX based system
 import logging.handlers
 import datetime
 from collections import OrderedDict
@@ -21,7 +21,7 @@ import mec.zp
 import mec.power_meter
 import mec.session
 
-RC_FILE = '~/.zappirc'
+RC_FILE = 'config'
 
 DELAY = 60
 
@@ -473,7 +473,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2 and sys.argv[1] == 'start':
         # On a raspberry pi it can take a while to enumerate and
         # close so many files.
-        resource.setrlimit(resource.RLIMIT_NOFILE, (1024, 1024))
+        #resource.setrlimit(resource.RLIMIT_NOFILE, (1024, 1024)) #This does not work on windows systems, uncomment this if using a UNIX based system
         with daemon.DaemonContext():
             main()
     else:

@@ -1,0 +1,9 @@
+# Rename this file to config after filling in the applicable data
+username: <replace with hub serial number>
+password: <replace with password>
+
+house_data:
+    <replace with zappi serial number>:
+        ectt2: CT1
+        name: <provide name for the device here>
+    net_phases1: <True if three phase, False if single phase>
