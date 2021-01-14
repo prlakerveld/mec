@@ -9,6 +9,7 @@ This builds heavily on https://github.com/twonk/MyEnergi-App-Api and https://mye
 # Configuration
 
 The code can be run directly from a checkout, no install process is required however some non-core python libs might be needed.
+In Windows, these packages can be obtained by running get_py_packages.bat (tested with Python 3.8 and 3.9)
 
 A config file is required and should contain at least the credentials used to authenticate against the MyEnergi severs,
 
