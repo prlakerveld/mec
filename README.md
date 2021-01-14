@@ -11,7 +11,7 @@ This builds heavily on https://github.com/twonk/MyEnergi-App-Api and https://mye
 The code can be run directly from a checkout, no install process is required however some non-core python libs might be needed.
 In Windows, these packages can be obtained by running get_py_packages.bat (tested with Python 3.8 and 3.9)
 
-A config file is required and should contain at least the credentials used to authenticate against the MyEnergi severs,
+A config file is required and should contain at least the credentials used to authenticate against the MyEnergi severs, a template is included in the checkout, fill in the required parameters and rename it to config
 
 ```
 username: <serial number of Hub>
@@ -75,6 +75,7 @@ Shows the currently configured boost timers
 
 ## get_zappi_history.py
 Shows the historic data from the cloud.  Can show both per minute data or per hour data for any specified day (if present on the servers) as well as fetching the data but reporting only daily totals.
+When using the argument -output-csv a CSV file with the data will be generated in the Output folder
 
 ## set_zappi_mode.py
 Sets the current mode of the Zappi.  Currently sets the mode of all Zappis to stop, needs command line options added.
